@@ -33,12 +33,17 @@ justify-content: auto;
  header nav h1{ 
  border-bottom: 3px solid var(--primary);
  margin-right:auto;
+ 
  }
  header nav a{
    text-decoration: none;
    padding: 6px;
-   border-radius: 4px;
+   border-radius: 4px; 
  }
  header nav a.active{
 background: var(--primary);
+}
+main{
+  max-width: 1200px;
+  margin: 40px;
 }
