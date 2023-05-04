@@ -9,7 +9,6 @@ import NotFound from "./pages/NotFound";
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
 
-
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
