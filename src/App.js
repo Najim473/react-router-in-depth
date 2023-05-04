@@ -6,10 +6,12 @@ import Faq from "./pages/help/Faq.jsx";
 import Contact from "./pages/help/Contact.jsx";
 import NotFound from "./pages/NotFound";
 import Careers, { careersLoader } from "./pages/careers/Careers";
+import CareerDetails, { careerDetailsLoader } from "./pages/careers/CareerDetails";
 // LAYOUTS 
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
 import CareersLayout from "./layouts/CareersLayout";
+
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -26,6 +28,12 @@ function App() {
             element={<Careers />}
             loader={careersLoader}
           />
+          <Route
+            path=":id"
+            element={<CareerDetails />}
+            loader={careerDetailsLoader}
+          />
+
         </Route>
         <Route path="*" element={<NotFound />} />
       </Route>
