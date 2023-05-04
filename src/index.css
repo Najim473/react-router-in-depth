@@ -32,8 +32,7 @@ justify-content: auto;
 }
  header nav h1{ 
  border-bottom: 3px solid var(--primary);
- margin-right:auto;
- 
+ margin-right:auto; 
  }
  header nav a{
    text-decoration: none;
