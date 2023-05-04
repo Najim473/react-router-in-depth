@@ -4,9 +4,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Faq from "./pages/help/Faq.jsx";
 import Contact from "./pages/help/Contact.jsx";
+import NotFound from "./pages/NotFound";
 // LAYOUTS 
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
+
 
 function App() {
   const router = createBrowserRouter(
@@ -18,6 +20,7 @@ function App() {
           <Route path="faq" element={<Faq />} />
           <Route path="contact" element={<Contact />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   )
