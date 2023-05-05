@@ -1,4 +1,14 @@
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
+
 const About = () => {
+  const [user, setUser] = useState("smith");
+  if (!user) {
+    // IT'S WILL REDIRECT HOME PAGE
+    // return <Navigate to="/" />;
+    // IF WE BACK THAT NOT REDIRECT HOME TO ABOUT
+    return <Navigate to="/" replace={true} />;
+  }
   return (
     <div className="about">
       <h2>Welcome About</h2>
@@ -20,6 +30,7 @@ const About = () => {
         quaerat eligendi ab harum, sapiente aliquam molestias maxime nulla quos
         odit?
       </p>
+      <button onClick={() => setUser(null)}>Logout</button>
     </div>
   );
 };
