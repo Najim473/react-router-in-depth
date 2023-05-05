@@ -30,7 +30,7 @@ export const contactAction = async ({ request }) => {
     email: data.get("email"),
     message: data.get("message"),
   };
-  console.log(submission);
+  // console.log(submission);
   if (submission.message.length < 10) {
     return { error: "Message must be over 10 chars long" };
   }
