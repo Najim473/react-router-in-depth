@@ -8,12 +8,10 @@ import NotFound from "./pages/NotFound";
 import Careers, { careersLoader } from "./pages/careers/Careers";
 import CareerDetails, { careerDetailsLoader } from "./pages/careers/CareerDetails";
 import CareerError from "./pages/careers/CareerError";
-
 // LAYOUTS 
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
 import CareersLayout from "./layouts/CareersLayout";
-
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -30,13 +28,11 @@ function App() {
           <Route
             index
             element={<Careers />}
-
             loader={careersLoader}
           />
           <Route
             path=":id"
             element={<CareerDetails />}
-
             loader={careerDetailsLoader}
           />
         </Route>
@@ -46,5 +42,4 @@ function App() {
   )
   return < RouterProvider router={router} />
 }
-
 export default App;
